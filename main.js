@@ -18,14 +18,14 @@ function getSurahs() {
       for (let surah in data.data) {
         surahsContainer.innerHTML += `
         <div class="surah-name">
-          <p>${data.data[surah].name.long}</p>
-          <p>${data.data[surah].name.transliteration.en}</p>
+        <p>${data.data[surah].name.long}</p>
+        <p>${data.data[surah].name.transliteration.en}</p>
         </div>
         
         `;
       }
       //Select all surahs
-      let surahText=document.querySelector('.surah-name')
+      let surahText = document.querySelector(".surah-name");
       let allSurahs = document.querySelectorAll(".surahs div"),
         AyahsAudios,
         AyahsText;
