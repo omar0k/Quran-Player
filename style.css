@@ -57,41 +57,38 @@
 
 body {
     font-family: 'Cairo', sans-serif;
-    background: #ffffff;
+    background: #c0bfbf;
     /* height: 100%;
     width: 100%; */
 
 }
 
 .surahs {
-    /* direction: rtl; */
-    margin-top: 30px;
-    color: red;
+    margin-top: 55px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 200px;
     padding: 10px;
     display: grid;
     grid-template-columns: auto auto auto;
 }
 
 .container {
-    max-width: auto;
+    max-width: 1250px;
     width: 100%;
-    padding: 15px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
 
 .player {
-    background: #544a7d;
-    background: -webkit-linear-gradient(to right, #ffd452, #544a7d);
-    background: linear-gradient(to right, #ffd452, #544a7d);
-    position: sticky;
+    background: linear-gradient(to right, #000000, #434343);
+    position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: auto;
     z-index: 1;
-    border-radius: 5px;
-
-
 }
 
 .player .ayah {
@@ -121,7 +118,7 @@ body {
     border-radius: 10%;
     display: grid;
     place-items: center;
-    color: #000000;
+    color: #b8b8b8;
     font-size: 23px;
     cursor: pointer;
 }
@@ -154,7 +151,7 @@ a.button {
     font-size: 25px;
     font-weight: bold;
     text-align: center;
-    
+
     counter-increment: surah-counter;
 }
 
@@ -191,15 +188,17 @@ a.button {
 
 .surahs>div:hover,
 .surahs>div:hover::after {
-    background: linear-gradient(to top, #e2c59e, rgb(39, 39, 39));
-    color: white;
+    /* background: linear-gradient(to top, #e2c59e, rgb(39, 39, 39)); */
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.479), rgb(39, 39, 39));
+
+    color: rgb(0, 0, 0);
 
 }
 
 
 #darkbtn {
-    float: right;
-    position: relative;
+    position: absolute;
+    right: 10px;
     text-align: right;
     appearance: none;
     background-color: #d53804;
@@ -311,3 +310,5 @@ nav a::before {
 nav a:hover::before {
     width: 100%;
 }
+
+/* READ.HTML css */

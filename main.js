@@ -4,8 +4,13 @@ let audio = document.querySelector(".quranPlayer"),
   next = document.querySelector(".next"),
   prev = document.querySelector(".prev"),
   play = document.querySelector(".play"),
-  darkmode = document.querySelector("#darkbtn");
+  darkmode = document.querySelector("#darkbtn"),
+  surahList = document.querySelector(".sidenav");
+
+//Made dark mode on by default.
+document.body.classList.toggle("dark-mode");
 getSurahs();
+
 function switchDarkMode() {
   var element = document.body;
   element.classList.toggle("dark-mode");
@@ -18,11 +23,15 @@ function getSurahs() {
       for (let surah in data.data) {
         surahsContainer.innerHTML += `
         <div class="surah-name">
-        <p>${data.data[surah].name.long}</p>
         <p>${data.data[surah].name.transliteration.en}</p>
+        <p>${data.data[surah].name.long}</p>
         </div>
-        
         `;
+        // surahList.innerHTML += `
+        // <div>
+        // <p>${data.data[surah].name.transliteration.en}</p>
+        // </div>
+        // `;
       }
       //Select all surahs
       let surahText = document.querySelector(".surah-name");
